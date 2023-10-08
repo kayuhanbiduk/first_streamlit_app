@@ -1,1 +1,1 @@
-snowflake-connectore-phyton
+snowflake-connectore-python
