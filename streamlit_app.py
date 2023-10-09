@@ -45,6 +45,10 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 # select firts row
 # my_data_row = my_cur.fetchone()
 # select all row
-my_data_row = my_cur.fetchall()
+my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit Load List Contains:")
-streamlit.dataframe(my_data_row)
+streamlit.dataframe(my_data_rows)
+
+snowflake_choice = streamlit.text_input('What fruit would you like information about?','Apple')
+streamlit.write('The user entered ', snowflake_choice)
+snowflake_response = requests.get("https://fruityvice.com/api/fruit/"+snowflake_choice)
