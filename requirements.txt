@@ -1,1 +1,2 @@
-urllib3==1.21.1
+snowflake-connector-python
+streamlit==1.25.0
